@@ -1,0 +1,179 @@
+{
+    "info": {
+      "_postman_id": "c7f8e1c0-1e2b-4b9f-8c1a-9e9b8d7c6f5a",
+      "name": "Car Rental System",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "User Service",
+        "item": [
+          {
+            "name": "Register User",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3001/users",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3001",
+                "path": ["users"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3001/users/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3001",
+                "path": ["users", "1"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update User",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"activeBookings\": 1\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3001/users/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3001",
+                "path": ["users", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Car Service",
+        "item": [
+          {
+            "name": "Add Car",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"model\": \"Toyota Camry\",\n  \"location\": \"New York\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3002/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3002",
+                "path": ["cars"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Car",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3002/cars/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3002",
+                "path": ["cars", "1"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Car",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"isAvailable\": false\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3002/cars/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3002",
+                "path": ["cars", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Booking Service",
+        "item": [
+          {
+            "name": "Create Booking",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"userId\": 1,\n  \"carId\": 1,\n  \"startDate\": \"2023-10-01\",\n  \"endDate\": \"2023-10-05\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3003/bookings",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3003",
+                "path": ["bookings"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get User Bookings",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3003/bookings/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3003",
+                "path": ["bookings", "1"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Cancel Booking",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3003/bookings/1",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "3003",
+                "path": ["bookings", "1"]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
